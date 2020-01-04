@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="portfolioStyle.css">
+  <link rel="icon" sizes="114x114" href="pink.png">
+  <title>avree</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Lemon|Noto+Serif+JP|Quicksand&display=swap" rel="stylesheet">
+<style></style>
+</head>
+<body>
+
+  <div class="header">
+    <img src="pink.png" class="header">
+    <h1>avery Hom</h1>
+    <p>ILLUSTRATION | DESIGN | VIDEO EDITING</p>
+  </div>
+
+<div class="nav">
+  <a href="index.htm">IMAGES</a>
+  <a href="portfolioVids.htm">VIDEOS</a>
+  <a class="active" href="#">ABOUT</a>
+</div>
+
+<div class="footer">
+  <p></p>
+</div>
+
+<div class="text">
+  <p>✉ averykhom@gmail.com ✉</p>
+</div>
+
+<!-- about -->
+
+<div class="about">
+  <h1>About</h1>
+  <p>I am a university student in California, but I was born<br>and raised in
+    New Jersey. I'm currently studying cognitive science <br>with a
+    specialization in design and interaction. I've always been passionate<br>
+    about art and I hope to share my excitement with others through my designs.
+  </p>
+
+  <button type="button" class="collapsible">Education</button>
+  <div class="content">
+    <p><b>University of California, San Diego</b><br>
+      September 2018 - present<br>
+      Cognitive Science with a Specialization in Design and Interaction
+    </p>
+  </div>
+  <button type="button" class="collapsible">Design Experience</button>
+  <div class="content">
+    <p class="content__text"><b>Marketing Assistant (Sept 2019 - present)</b><br>
+    Designs marketing collateral for the performing arts presenting organization,
+    ArtPower, using Adobe Creative Suite Software.
+    <br><br><b>KOTX Media Staff (Nov 2019 - present)</b><br>
+    Films and edits videos for the dance team using Premiere Pro. Also designs
+    apparel for the organization.
+    <br><br><b>Personal Projects (Dec 2019)</b><br>
+    Designed and programmed a website as a portfolio.
+    </p>
+  </div>
+  <button type="button" class="collapsible">Website Purpose</button>
+  <div class="content">
+    <p class="content__text"> Not only does this website act as my portfolio,
+    but it was also a productive way for me to teach myself front-end
+    programming. I designed this website and programmed everything using html,
+    CSS and JavaScript. This was my first time doing front-end development, so
+    there is still much to improve on. Thus, I plan on developing this website
+    as well as start more projects in the future.
+    </p>
+  </div>
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+  <div class="bottom">
+    <p></p>
+  </div>
+
+  </body>
+  </html>

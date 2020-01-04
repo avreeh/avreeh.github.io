@@ -1,0 +1,278 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 1100px
+}
+
+video{
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.portfolio-lightbox h1 {
+  margin: 0em;
+  display: block;
+  text-align: center;
+  font-style: italic;
+}
+
+.portfolio-lightbox p {
+  margin: 0em;
+  display: block;
+  text-align: center;
+  font-weight: 300;
+}
+
+.button {
+  display: block;
+  text-decoration: none;
+  color:black;
+  text-align: center;
+}
+
+.portfolio {
+  margin-top:0;
+  display: grid;
+  grid: auto / repeat(4, minmax(15em, 1fr));
+  grid-gap:0em 0.8em;
+  padding: 0.25em 0em;
+  background: white;
+  float: center;
+}
+
+.portfolio img{
+  width: 33vw;
+  height: 25vw;
+  object-fit:cover;
+  min-width: 265px;
+  min-height: 265px;
+}
+
+.portfolio__item{}
+
+.portfolio__title{}
+
+.portfolio-lightbox{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scale(0,0);
+  transition: transform ease-in-out 200ms;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.portfolio-lightbox:target{
+  transform: scale(1,1);
+}
+
+.portfolio-lightbox:target .text {
+  color: white;
+}
+
+.portfolio-lightbox__content{
+  width: 100%;
+  max-width: 350px;
+  color: black;
+}
+
+.portfolio-lightbox__content video{
+  width: 100%;
+  color: #646464;
+  max-width: 600px;
+}
+
+.close{
+  position: absolute;
+  width: 2em;
+  height: 2em;
+  top: 1.25em;
+  right: 1em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close::after{
+  font-size: 2rem;
+  content: 'X';
+  color: #646464;
+  font-family: Quicksand;
+}
+
+ img { /*change to portfolio img */
+   max-width:100%;
+}
+
+/* Header style */
+.header{
+  background-color: #f1f1f1;
+  padding-top: 75px;
+  padding-bottom: 10px;
+  text-align: center;
+  color: #F7CAC9;
+}
+
+.header img{
+  width: 15vw;
+  height: 15vw;
+  left: 50%;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 0;
+  min-width: 160px;
+  min-height: 160px;
+}
+
+.header h1{
+  margin-top: 0;
+  margin-bottom: .35em;
+  font-family: Lemon;
+}
+
+.header p{
+  margin: 0;
+  color: #a6a6a6;
+  font-family: Quicksand;
+  letter-spacing: .3em;
+  font-size: 14px;
+}
+
+/* navigation bar */
+.nav{
+  width: 100%;
+  overflow; hidden;
+  padding-bottom: 1.9em;
+  background-color: #f2f2f2;
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 3.25em;
+}
+
+.nav a{
+  display: inline-block;
+  color: black;
+  text-align: center;
+  padding: 14px 50px;
+  text-decoration: none;
+  font-style: italic;
+  font-family: 'Noto Serif JP', serif;
+}
+
+.nav a:hover{
+  color: #a6a6a6;
+}
+
+.nav a.active{
+  color: #a6a6a6;
+}
+
+.portfolio img:hover{
+  opacity:.6;
+}
+
+.portfolio__item:hover .portfolio__item.first{opacity: 1;}
+.portfolio__item:hover .portfolio__item.second{opacity: 1;}
+.portfolio__item:hover .portfolio__item.third{opacity: 1;}
+.portfolio__item:hover .portfolio__item.fourth{opacity: 1;}
+
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 15%;
+  opacity: 0.7;
+  background-color: white;
+  color: black;
+  text-align: center;
+}
+
+.bottom{
+  background-color: white;
+  height: 12vh;
+  text-align: center;
+  color: #646464;
+  bottom: 0;
+}
+
+.text{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 15%;
+  color: #646464;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Quicksand;
+}
+
+.vid__item{
+  display: grid;
+  grid: 1fr;
+  padding-left: 29em;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ------------- about ------------- */
+.about{
+  margin-top:0;
+  text-align: center;
+  font-style: italic;
+}
+
+.about p{
+  padding-top: .5em;
+  padding-bottom: 2em;
+  font-style: normal;
+  font-family: Quicksand;
+  color: #646464;
+}
+
+.about h1{
+  margin: 0;
+  padding: 0;
+  font-size: 26px;
+}
+
+.collapsible{
+  background-color: #646464;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 60%;
+  text-align: center;
+  outline: none;
+  font-size: 18px;
+  font-family: 'Noto Serif JP', serif;
+  font-style: italic;
+}
+
+.collapsible.active, .collapsible:hover {
+  background-color: #a6a6a6
+}
+
+.content{
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: white;
+}
+
+.content__text{
+  text-align: left;
+  padding: 0 15em;
+}
